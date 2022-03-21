@@ -1,0 +1,35 @@
+1. metódus:
+tömb: 2 betűs szavak
+random kiválaszt 1 szót, ezzel fog a későbbiekben dolgozni a program
+
+2. metódus:
+bekérés: ez kéri be a felhasználótól a szót
+-előfeltétel: csak 2 betűs szavakat fogad el
+
+3. metódus:
+a bekért szót karakterekre választja
+
+4. metódus:
+megnézi, hogy a karakterek benne vannak-e a kitalálandó szóban, és ha igen, megmondja, hogy jó helyen van-e, vagy nem
+
+példa:
+
+kitalálandó szó: őr
+console példa minták:
+
+szó: lő
+
+nincs benne: l
+van benne: ő
+jó helyen van:  
+
+-------------------------
+
+szó: őz
+
+nincs benne: z
+van benne: ő
+jó helyen van: ő
+
+main:
+egy ciklusban lesz meghívva a metódus, addig megy a játék, amíg a felhasználó akar játszani
