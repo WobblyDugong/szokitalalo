@@ -1,6 +1,6 @@
 # szokitalalo
 
-Báhidi Botond: WobblyDugong
+Bánhidi Botond: WobblyDugong
 Bella Richard: ASDleves
 Berényi Péter: BerenyiPeti
 
