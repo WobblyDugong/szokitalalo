@@ -8,13 +8,12 @@ public class SzokitalaloJatek1 {
 
     public static void main(String[] args) {
         String szo = gondoltszo();
-        String tipp = tippeltszo();
-        // jobetuE(szo);
+        String tipp = tippeltszo(szo);
+        jobetuE(szo, tipp);
     }
 
-    static void jobetuE(String szo) {
-        String tipp = "ab";
-        szo = "aa";
+    static void jobetuE(String szo, String tipp) {
+
         char[] tippDarabolt = tipp.toCharArray();
         char[] szoDarabolt = szo.toCharArray();
         char[] joBetuk = new char[2];
@@ -29,7 +28,7 @@ public class SzokitalaloJatek1 {
             }
             boolean talalt = kindex < szoDarabolt.length;
             if (talalt) {
-                // joBetuk[index] = tiprivateppDarabolt[index];
+                joBetuk[index] = tippDarabolt[index];
             } else {
                 rosszBetuk[index] = tippDarabolt[index];
             }
@@ -49,17 +48,21 @@ public class SzokitalaloJatek1 {
     }
 
     public static String gondoltszo() {
+        String gondoltszo = "";
         String[] szavak = { "őz", "ló", "só" };
         Random rnd = new Random();
         int also = 0, felso = 2;
-        String gondoltszo = szavak[rnd.nextInt(felso - also + 1) + also];
+        gondoltszo = szavak[rnd.nextInt(felso - also + 1) + also];
         return gondoltszo;
     }
 
-    public static String tippeltszo() {
-        Scanner beker = new Scanner(System.in);
-        System.out.println("Adja meg a tippjét: ");
-        String tipp = beker.nextLine();
+    public static String tippeltszo(String szo) {
+        String tipp = "";
+        do {
+            Scanner beker = new Scanner(System.in);
+            System.out.println("Adja meg a tippjét: ");
+            tipp = beker.nextLine();
+        } while (!tipp.matches("[a-zA-Z]+") || tipp.length() != szo.length());
         return tipp;
     }
 }
