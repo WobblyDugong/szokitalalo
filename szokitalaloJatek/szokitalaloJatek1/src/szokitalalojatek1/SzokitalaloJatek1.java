@@ -17,6 +17,8 @@ public class SzokitalaloJatek1 {
         char[] szoDarabolt = szo.toCharArray();
         char[] joBetuk = new char[2];
         char[] rosszBetuk = new char[2];
+        //String abc = "aábcdd";
+        char[] betuk = {};
         //char[] joHelyenVannak = new char[2];
         //String darabolt1 = darabolt[0], darabolt2 = darabolt[1];
         //System.out.println("jobetük:" + joBetuk.length);
@@ -72,7 +74,7 @@ public class SzokitalaloJatek1 {
 
     public static String gondoltszo() {
         String gondoltszo = "";
-        String[] szavak = {"őz", "ló", "só"};
+        String[] szavak = {"oz", "lo", "so"};
         Random rnd = new Random();
         int also = 0, felso = 2;
         gondoltszo = szavak[rnd.nextInt(felso - also + 1) + also];
