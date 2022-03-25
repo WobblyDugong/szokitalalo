@@ -12,7 +12,7 @@ public class SzokitalaloJatek1 {
     }
 
     static void jobetuE(String szo, String tipp) {
-
+        
         char[] tippDarabolt = tipp.toCharArray();
         char[] szoDarabolt = szo.toCharArray();
         char[] joBetuk = new char[2];
@@ -72,11 +72,10 @@ public class SzokitalaloJatek1 {
 
     public static String gondoltszo() {
         String gondoltszo = "";
-        String[] szavak = {"őz", "ló", "só"};
+        String[] szavak = {"az", "ez", "so"};
         Random rnd = new Random();
         int also = 0, felso = 2;
         gondoltszo = szavak[rnd.nextInt(felso - also + 1) + also];
-        System.out.println(gondoltszo);
         return gondoltszo;
     }
 
@@ -87,7 +86,7 @@ public class SzokitalaloJatek1 {
             Scanner beker = new Scanner(System.in);
             System.out.println("Adja meg a tippjét: ");
             tipp = beker.nextLine();
-            tippJo = tipp.matches("ő") && tipp.matches("ű") && tipp.matches("ó");
+            //tippJo = tipp.matches("ő") && tipp.matches("ű") && tipp.matches("ó");
         } while (!tipp.matches("[a-zA-Z]+") && tippJo || tipp.length() != szo.length());
         return tipp;
     }
