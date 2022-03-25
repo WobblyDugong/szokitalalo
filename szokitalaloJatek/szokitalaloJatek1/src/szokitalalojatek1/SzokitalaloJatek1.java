@@ -9,7 +9,7 @@ public class SzokitalaloJatek1 {
     public static void main(String[] args) {
         String szo = gondoltszo();
         String tipp = tippeltszo(szo);
-        jobetuE(szo, tipp);
+        // jobetuE(szo, tipp);
     }
 
     static void jobetuE(String szo, String tipp) {
@@ -58,11 +58,13 @@ public class SzokitalaloJatek1 {
 
     public static String tippeltszo(String szo) {
         String tipp = "";
+        boolean tippJo = false;
         do {
             Scanner beker = new Scanner(System.in);
             System.out.println("Adja meg a tippjét: ");
             tipp = beker.nextLine();
-        } while (!tipp.matches("[a-zA-Z]+") || tipp.length() != szo.length());
+            tippJo = tipp.matches("ő") && tipp.matches("ű") && tipp.matches("ó");
+        } while (!tipp.matches("[a-zA-Z]+") && tippJo || tipp.length() != szo.length());
         return tipp;
     }
 }
